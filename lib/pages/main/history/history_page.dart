@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:green_care/utils/colors.dart';
 
 class HistoryPage extends StatelessWidget {
   const HistoryPage({super.key});
@@ -35,11 +36,11 @@ class HistoryPage extends StatelessWidget {
     Color _getTypeColor(String type) {
       switch (type) {
         case "watering":
-          return const Color(0xFF2E7D32);
+          return AppColors.mainColor2;
         case "alert":
           return Colors.orange;
         case "sensor":
-          return const Color(0xFF004580);
+          return AppColors.mainColor;
         default:
           return Colors.grey;
       }
@@ -61,7 +62,7 @@ class HistoryPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF7FFF7),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF004580),
+        backgroundColor: AppColors.mainColor2,
         title: const Text("Lịch sử hoạt động",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         centerTitle: true,
